@@ -1,0 +1,555 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+.light-mode .social-media-dashboard {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 41px;
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+}
+.light-mode .social-media-dashboard:before {
+  content: "";
+  display: block;
+  background-color: hsl(230deg 75% 98%);
+  width: 100%;
+  height: 235px;
+  background-size: 100%;
+  position: absolute;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.social-media {
+  padding-top: 40px;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 24px;
+  position: relative;
+}
+.head-social {
+  font-weight: 700;
+  font-size: 20px;
+}
+.light-mode .total-follow {
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(225deg 4% 57%);
+}
+.bar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.light-mode .line {
+  background-color: hsl(225deg 9% 65%);
+  width: 327px;
+  height: 1px;
+  margin-top: 22px;
+}
+.mode {
+  margin-top: 20px;
+  display: flex;
+  width: 375px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: relative;
+}
+.light-mode .type-mode {
+  font-size: 12px;
+  color: hsl(229deg 7% 47%);
+  font-weight: 700;
+}
+/* toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(210, 78%, 56%);
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: hsl(230, 22%, 74%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: white;
+}
+input + .slider:before {
+  background-color: hsl(233deg 24% 27%);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+}
+
+/* data-followers */
+.data-followers {
+  margin-top: 14px;
+  text-align: center;
+}
+.light-mode .social {
+  width: 326px;
+  height: 216px;
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 10px;
+  margin-top: 24px;
+  position: relative;
+}
+.light-mode .social:hover {
+  cursor: pointer;
+  background-color: hsl(228deg 33% 91%);
+}
+.line-social {
+  width: 326px;
+  height: 5px;
+}
+/* facebook */
+.social-facebook {
+  background-color: hsl(208, 92%, 53%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+}
+.follower {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.light-mode .person {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(227deg 8% 49%);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3px;
+}
+.num-follower {
+  margin-top: 30px;
+  font-size: 45px;
+  font-weight: 700;
+}
+.light-mode .followers {
+  margin-top: 8px;
+  color: hsl(227deg 7% 58%);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.icon-up {
+  width: 10px;
+  height: 4px;
+  margin-right: 4px;
+}
+.time {
+  font-size: 10px;
+  font-weight: 700;
+  color: hsl(163, 72%, 41%);
+}
+/* twitter */
+.social-twitter {
+  background-color: hsl(208, 92%, 53%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+/* instagram */
+.social-instagram {
+  background-color: hsl(
+    37,
+    97%,
+    70%
+  ); /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+/* youtube */
+.social-youtube {
+  background-color: hsl(348, 97%, 39%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.time-down {
+  color: hsl(356, 69%, 56%);
+  font-size: 10px;
+  font-weight: 700;
+}
+.icon-down {
+  margin-right: 4px;
+}
+/* Overview Today */
+.overview-today {
+  padding-top: 50px;
+}
+.head-overview-today {
+  display: flex;
+  width: 375px;
+  justify-content: flex-start;
+  padding: 0 24px;
+}
+.light-mode .head-overview {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  margin: 0;
+}
+.activities {
+  text-align: center;
+  padding-top: 11px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.light-mode .activity {
+  margin-top: 16px;
+  width: 326px;
+  height: 125px;
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 10px;
+  padding: 25px 23px 0;
+}
+.light-mode .activity:hover {
+  cursor: pointer;
+  background-color: hsl(228deg 33% 91%);
+}
+.data-activity {
+  display: flex;
+  justify-content: space-between;
+}
+.num-activity {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.light-mode .type-activity {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+}
+.light-mode .total-activity {
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+}
+.percent {
+  display: flex;
+  align-items: center;
+}
+.percent-up {
+  color: hsl(163, 72%, 41%);
+  font-size: 11px;
+  font-weight: 700;
+}
+.percent-down {
+  color: hsl(356, 69%, 56%);
+  font-size: 11px;
+  font-weight: 700;
+}
+/* Dark mode - mobile */
+.dark-mode .social-media-dashboard {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 41px;
+  position: relative;
+  background-color: hsl(230, 17%, 14%);
+}
+.dark-mode .social-media-dashboard:before {
+  content: "";
+  display: block;
+  background-color: hsla(232, 19%, 15%, 1);
+  width: 100%;
+  height: 235px;
+  background-size: 100%;
+  position: absolute;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.dark-mode .head-social {
+  color: white;
+}
+
+.dark-mode .total-follow {
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  color: hsla(231, 15%, 55%, 1);
+}
+
+.dark-mode .line {
+  background-color: hsla(231, 15%, 55%, 1);
+  width: 327px;
+  height: 1px;
+  margin-top: 22px;
+}
+
+.dark-mode .type-mode {
+  font-size: 12px;
+  color: hsla(231, 15%, 55%, 1);
+  font-weight: 700;
+}
+/* data-followers */
+.dark-mode .social {
+  width: 326px;
+  height: 216px;
+  background-color: hsla(228, 29%, 20%, 1);
+  border-radius: 10px;
+  margin-top: 24px;
+  position: relative;
+}
+.dark-mode .social:hover {
+  cursor: pointer;
+  background-color: hsl(228deg 25% 27%);
+}
+.dark-mode .num-follower {
+  color: white;
+}
+.dark-mode .person {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(231deg 24% 63%);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3px;
+}
+
+.dark-mode .followers {
+  margin-top: 8px;
+  color: hsl(232deg 16% 54%);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* Overview Today */
+.dark-mode .head-overview {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+.dark-mode .activity {
+  margin-top: 16px;
+  width: 326px;
+  height: 125px;
+  background-color: hsl(228deg 29% 20%);
+  border-radius: 10px;
+  padding: 25px 23px 0;
+}
+.dark-mode .activity:hover {
+  cursor: pointer;
+  background-color: hsl(228deg 25% 27%);
+}
+
+.dark-mode .type-activity {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(227deg 22% 62%);
+}
+.dark-mode .total-activity {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  /* light mode-desktop */
+  .social-media-dashboard {
+    min-height: 100vh;
+  }
+  .light-mode .social-media-dashboard:before {
+    content: "";
+    display: block;
+    background-color: hsl(230deg 75% 98%);
+    width: 100%;
+    height: 245px;
+    background-size: 100%;
+    position: absolute;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  .head-social-media {
+    display: flex;
+    width: 1114px;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .line {
+    display: none;
+  }
+  .mode {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-top: 0;
+    width: 123px;
+  }
+  .type-mode {
+    margin-right: 11px;
+  }
+  .social-media-dashboard {
+    padding-bottom: 76px;
+  }
+  .social {
+    margin-top: 0;
+  }
+  .social-media {
+    padding-left: 0;
+    padding-top: 0;
+  }
+  /* toggle switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* data follower */
+  .data-followers {
+    display: flex;
+    gap: 31px;
+    padding-top: 45px;
+    margin-top: 0;
+  }
+  .light-mode .social {
+    width: 253px;
+    height: 215px;
+  }
+  .line-social {
+    width: 252px;
+  }
+  /* Overview-Today */
+  .overview-today {
+    width: 1440px;
+    padding-top: 47px;
+  }
+  .head-overview-today {
+    width: 1440px;
+    padding-left: 165px;
+  }
+  .activities {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 31px;
+    padding-left: 165px;
+    padding-right: 165px;
+  }
+  .light-mode .activity {
+    width: 254px;
+    height: 125px;
+    margin-top: 0;
+  }
+  /* Dark mode-desktop */
+  .dark-mode .social-media-dashboard:before {
+    content: "";
+    display: block;
+    background-color: hsl(236deg 18% 16%);
+    width: 100%;
+    height: 245px;
+    background-size: 100%;
+    position: absolute;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  /* data follower */
+  .dark-mode .social {
+    width: 253px;
+    height: 215px;
+  }
+  /* Overview-Today */
+  .dark-mode .activity {
+    width: 254px;
+    height: 125px;
+    margin-top: 0;
+  }
+  .dark-mode .total-activity {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+  }
+}
